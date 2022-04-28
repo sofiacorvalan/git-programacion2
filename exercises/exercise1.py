@@ -1,6 +1,9 @@
 """Bloque IF, operadores lógicos, función max y operador ternario."""
 
 
+from re import A
+
+
 def maximo_basico(a: float, b: float) -> float:
     """Toma dos números y devuelve el mayor.
 
@@ -10,10 +13,16 @@ def maximo_basico(a: float, b: float) -> float:
         - No utilizar la función max
     """
 
+    if a > b :
+        return a
+
+    if b > a :
+        return b
 
 # NO MODIFICAR - INICIO
 assert maximo_basico(10, 5) == 10
 assert maximo_basico(9, 18) == 18
+
 # NO MODIFICAR - FIN
 
 
