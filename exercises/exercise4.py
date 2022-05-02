@@ -15,6 +15,23 @@ def es_vocal_if(letra: str) -> bool:
     """
 
 
+    vocales= ["a","e","i","o","u"]
+
+    min=letra.lower()
+
+    if min == vocales[0]:
+        return True
+    if min == vocales[1]:
+        return True
+    if min == vocales[2]:
+        return True
+    if min == vocales[3]:
+        return True
+    if min == vocales[4]:
+        return True
+    return False
+
+    
 # NO MODIFICAR - INICIO
 assert es_vocal_if("a")
 assert not es_vocal_if("b")
@@ -39,6 +56,12 @@ def es_vocal_if_in(letra: str) -> bool:
 
     Referencia: https://docs.python.org/3/reference/expressions.html#membership-test-operations # noqa: E501
     """
+    vocales= ["a","e","i","o","u"]
+    
+    if letra.lower() in vocales:
+        return True
+    return False
+
 
 
 # NO MODIFICAR - INICIO
@@ -60,7 +83,21 @@ def es_vocal_in(letra: str) -> bool:
         - No utilizar FOR.
         - No utilizar listas.
     """
+    x=True
 
+    while letra.lower() != "a":
+        x = False
+    while letra.lower() != "e":
+        x = False
+    while letra.lower() != "i":
+        x = False
+    while letra.lower() != "o":
+        x = False
+    while letra.lower() != "u":
+        x = False
+    
+    return x
+    
 
 # NO MODIFICAR - INICIO
 assert es_vocal_in("a")

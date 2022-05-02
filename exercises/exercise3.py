@@ -42,7 +42,16 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
         - No utilizar ELIF ni ELSE.
         - No utilizar AND ni OR.
     """
-    
+ 
+    if multiplicar:
+        return a*b
+        
+    if b == 0:
+        
+        return "Operación no válida"
+
+    return a/b
+               
 
   
 
