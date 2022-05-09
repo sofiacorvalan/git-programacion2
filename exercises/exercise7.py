@@ -13,6 +13,15 @@ def superposicion_basico(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool
     """
 
 
+    for i in lista_1:
+        for x in lista_2:
+            if x == i:
+                return True
+    return False 
+
+
+    
+
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
 assert superposicion_basico(test_list, (2, "world", 35.20))
