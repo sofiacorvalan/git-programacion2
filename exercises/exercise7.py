@@ -39,7 +39,18 @@ def superposicion_in(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
         - Utilizar un único bucle FOR.
         - Utilizar dos returns.
     """
+    lista3= []
 
+    lista3.extend(lista_1)
+    lista3.extend(lista_2)
+
+    for i in lista3:
+        if lista3.count(i)>1:
+            return True
+    
+    return False
+
+    
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
@@ -62,6 +73,7 @@ def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
 
+    
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
