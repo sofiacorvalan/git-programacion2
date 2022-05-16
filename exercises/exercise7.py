@@ -1,5 +1,7 @@
 """Any y Sets."""
 
+
+from cgi import print_directory
 from typing import Any, Iterable
 
 
@@ -50,8 +52,6 @@ def superposicion_in(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
     
     return False
 
-    
-
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
 assert superposicion_in(test_list, (2, "world", 35.20))
@@ -73,7 +73,10 @@ def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
 
-    
+    lista3 = [num for num in lista_1 if num == num in lista_2]
+
+    return any(lista3)
+
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
@@ -94,7 +97,12 @@ def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset  # noqa: E501
     """
+    lista_1=set(lista_1)
+    lista_2=set(lista_2)
 
+    lista3= lista_1.intersection(lista_2)
+    
+    return lista3
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]

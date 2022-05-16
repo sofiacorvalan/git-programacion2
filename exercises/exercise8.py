@@ -22,7 +22,8 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
         - Utilizar la función range.
         - Utilizar índices.
     """
-
+    for i in range (len(nombres)) :
+        print (nombres[i] , precios[i])
 
 # NO MODIFICAR - INICIO
 respuesta = (
@@ -80,7 +81,7 @@ def combinar_zip(nombres: List[str], precios: List[float], ids: List[int]) -> Tu
         - No utilizar índices.
     Referencia: https://docs.python.org/3/library/functions.html#zip
     """
-
+    return (tuple(zip(nombres, precios, ids)))
 
 # NO MODIFICAR - INICIO
 respuesta = (
